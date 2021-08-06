@@ -1,0 +1,657 @@
+html {
+  background-color:rgba(230,233,174,0.1);
+}
+
+body *{
+  box-sizing: border-box;
+  box-sizing: inherit;
+  font-family: 'Oswald','Noto Sans JP', sans-serif;
+}
+
+h1 {
+  font-size: 22px;
+  letter-spacing: 2px;
+  text-align: center;
+  padding: 24px 0 13px;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+  font-size: 15px;
+}
+
+.pcNav ul {
+  display: flex;
+  display: none;
+  max-width: 1200px;
+  margin: 0 auto 40px;;
+  justify-content: space-evenly;
+  border-bottom: solid 1px #ccbcbc;
+}
+
+.pcNav li {
+  margin: 20px;
+}
+
+.pcNav a {
+  color: #000000;
+}
+
+.pcNav a:hover {
+  transition: all 0.3s ease;
+  color: #fb511c;
+}
+
+.topIcon img {
+  width: 110px;
+  position: absolute;
+  z-index: 11;
+  right: 3%;
+  animation: move 3s ease-in-out infinite;
+}
+
+@keyframes move {
+  0%{bottom: 50%;}
+  50%{bottom: 52%;}
+  100%{bottom: 50%;}
+}
+
+#globalNav {
+  width: 60%;
+  background-color: rgba(0,0,0,0.9);
+  z-index: 12;
+  position: fixed;
+  top: 0;
+  right: -100%;
+  height: 100%;
+  transition: right 0.7s;
+}
+
+#globalNav a {
+  color: #ffffff;
+  font-size: 12px;
+}
+
+#globalNav li {
+  padding: 24px 0 6px 0;
+  padding-left: 20%;
+}
+
+#globalNav li:first-child {
+  margin-top: 20px;
+}
+
+
+#globalNav.sideOpen {
+  right: 0;
+}
+
+.mainImg {
+  height: 55vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.topImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+  animation: anime 18s 0s infinite;
+}
+
+.topImg:nth-of-type(2) {
+  animation-delay: 6s;
+}
+
+.topImg:nth-of-type(3) {
+  animation-delay: 12s;
+}
+
+@keyframes anime {
+  0% {
+       opacity: 0;
+   }
+   17% {
+       opacity: 1;
+   }
+   33% {
+       opacity: 1;
+   }
+   50% {
+       opacity: 0;
+       transform: scale(1.2) ;
+        z-index:4;
+   }
+   100% {
+       opacity: 0
+   }
+}
+
+.logoIcon {
+  width: 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.navIcon {
+  width: 53px;
+  position: fixed;
+  top: 3px;
+  right: 3px;
+  z-index: 13;
+}
+
+.drawerToggle {
+  width: 20px;
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  display: none;
+  z-index: 10;
+}
+
+.container {
+  margin: 0 5px;
+}
+
+.news {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.news p {
+  width: 50%;
+  font-size: 11px;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.newsImg {
+  width: 50%;
+  overflow: hidden;
+}
+
+.news img {
+  width: 100%;
+}
+
+.news img:hover {
+  transform:scale(1.1);
+  transition:0.3s all;
+  opacity: 0.8;
+}
+
+.pointImg {
+  background-image: url(../gympic/PointSp.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 40px;
+}
+
+.pointText {
+  color: #ffffff;
+  margin: 0 5px;
+}
+
+.topic {
+  padding-top: 5px;
+}
+
+.topic p {
+  text-align: center;
+  font-size: 10px;
+  margin-bottom: 30px;
+}
+
+.point {
+  border-bottom: 1px solid #fffc00;
+  border-image: linear-gradient(to right, #fffc00 0%, #fd2b1d 100%);
+  border-image-slice: 1;
+  text-align: center;
+  padding: 22px 0;
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 2000ms;
+}
+
+.effect-scroll {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.point {
+  transition-delay: 800ms;
+}
+
+.point:nth-of-type(2) {
+  transition-delay: 200ms;
+}
+
+.point:nth-of-type(3) {
+  transition-delay: 400ms;
+}
+
+.point h2 {
+  font-size: 45px;
+  font-style: italic;
+}
+
+.point p {
+  font-size: 11px;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+}
+
+.point span {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.point img {
+  width: 35%;
+}
+
+.whiteBtn {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.whiteBtn a{
+  color: #fff;
+  border: solid 1px #fff;
+  border-radius: 50px;
+  letter-spacing: 4px;
+  padding: 4px 20px;
+  font-size: 17px;
+}
+
+.whiteBtn a:hover {
+  color: #333333;
+  border: solid 1px #333333;
+  transition: all 0.3s ease;
+}
+
+.course {
+  background-image: url(../gympic/Stone.jpg);
+  background-position: center;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.courseList {
+  padding: 0 5px;
+  margin: 0 auto;
+  max-width: 1200px;
+
+}
+
+.courseList li {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 9px 10px 16px -7px #000000;
+  padding: 23px 30px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+}
+
+.effect-fade {
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: all 2000ms;
+}
+
+.effect-fade:nth-of-type(2) {
+  transition-delay: 400ms;
+}
+
+.effect-fade:nth-of-type(3) {
+  transition-delay: 800ms;
+}
+
+.effect-scroll {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.course h1 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.course h2 {
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+
+.courseList span {
+  font-size: 30px;
+  background: linear-gradient(transparent 70%, #f74e19 70%);
+}
+
+.optionList {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 5px;
+}
+
+.option {
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 9px 10px 16px -7px #000000;
+  padding: 23px 30px;
+  border-radius: 3px;
+}
+
+.option span {
+  font-size: 30px;
+  background: linear-gradient(transparent 70%, #FFFF55	 70%);
+}
+
+.subTitle {
+  font-size: 12px;
+  padding: 11px 0 25px;
+}
+
+.price {
+  padding-bottom: 19px;
+  border-bottom: dotted 2px rgba(0,0,0,0.7);
+}
+
+.time {
+  font-size: 14px;
+  padding-top: 20px;
+  line-height: 18px;
+}
+
+.btn {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.btn a{
+  color: #000000;
+  border: solid 1px #000000;
+  border-radius: 50px;
+  letter-spacing: 4px;
+  padding: 4px 20px;
+  font-size: 17px;
+}
+
+.btn a:hover {
+  color: #333333;
+  border: solid 1px #333333;
+  transition: all 0.3s ease;
+}
+
+.program {
+  margin: 0 5px 70px;
+}
+
+.programList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.programList li {
+  width: 44%;
+  position: relative;
+  margin: 10px;
+}
+
+.programList li::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.programList li img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.programIcon {
+  width: 188px;
+	height:	188px;
+	margin:	10px 8px 10px 16px;
+	position:	relative;
+}
+
+.programIcon img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.mask {
+  width: 100%;
+	height: 100%;
+	position:	absolute;
+	top:	0;
+	left:	0;
+	opacity:	0;
+	background-color:	rgba(0,0,0,0.7);
+	transition:	all 0.2s ease;
+}
+
+.programList li:hover .mask {
+	opacity: 1;
+}
+
+.mask p {
+  font-size: 18px;
+  letter-spacing: 1px;
+	text-align: center;
+  padding-top: 45%;
+	color: #ffffff;
+}
+
+.List {
+  display: flex;
+}
+
+footer {
+  background-color: #000000;
+  padding: 10px 10px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer p {
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.8;
+  margin: 23px 0px 10px;
+}
+
+.footNav {
+  font-size: 15px;
+}
+
+.footNav li {
+  margin: 5px 10px 16px;
+}
+
+.snsIcon {
+  display: flex;
+}
+
+.snsIcon li {
+  margin: 0 10px 10px;
+}
+
+.snsIcon a {
+  font-size: 27px;
+}
+
+
+
+@media screen and (min-width:768px) {
+
+  .courseList {
+    display: flex;
+  }
+
+  .courseList li {
+    flex: 1;
+    padding: 23px 12px;
+  }
+
+  .courseList li:nth-of-type(2) {
+    margin: 0 5px 10px;
+  }
+
+  .optionList {
+    max-width: 600px;
+  }
+
+  .option {
+    padding: 23px 12px;
+  }
+
+}
+
+
+@media screen and (min-width:769px) {
+
+  .topIcon img {
+    width: 160px;
+    right: 11%;
+  }
+
+  .news {
+    display: block;
+    margin: 0 3px;
+  }
+
+  .container {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .newsImg {
+    width: 100%;
+  }
+
+  .news p {
+    width: 100%;
+    padding: 5px 0;
+  }
+
+  .pointImg {
+    background-image: url(../gympic/Point.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .pointText {
+    width: 50%;
+  }
+
+  .point {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .point p {
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 0.5px;
+    padding: 0 80px;
+  }
+
+  .point span {
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .program {
+    margin: 0 50px;
+  }
+
+  .programList {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .programList li {
+    width: 23%;
+  }
+
+  .footNav {
+    display: flex;
+  }
+
+}
+
+@media screen and (min-width:600px) {
+
+  h1{
+    font-size: 23px;
+  }
+
+  .pcNav ul {
+    display: block;
+    display: flex;
+  }
+
+  .navIcon {
+    display: none;
+  }
+
+  .logoIcon {
+    width: 250px;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto 24px;
+  }
+
+  .news p {
+    font-size: 13px;
+  }
+
+  .topic p {
+    font-size: 13px;
+  }
+
+  .pcSize {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .program {
+    max-width: 1200px;
+    margin: 0 auto 70px;
+   }
+
+   .footNav {
+     max-width: 1200px;
+     margin: 0 auto;
+   }
+
+   .snsIcon {
+     max-width: 1200px;
+     margin: 0 auto;
+   }
+
+}
